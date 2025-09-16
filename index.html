@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt Inżynierski F1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Nagłówek -->
+    <header>
+        <h1>Projekt DevOps - najlepsze praktyki</h1>
+        <p>Szkice, koncepcje i automatyzacja z DevOps</p>
+    </header>
+
+    <!-- Sekcja O projekcie -->
+    <main>
+        <section>
+            <h2>O projekcie</h2>
+            <p>Ta strona to wizualizacja projektów DevOps w stylu blueprint F1. Wszystko jest pakowane w Dockera, testowane i gotowe do deploymentu.</p>
+            <!-- SVG bolidu F1 -->
+            <svg width="100%" height="150" viewBox="0 0 600 150">
+                <polyline points="10,130 50,90 100,90 150,50 200,50 250,80 300,80 350,40 400,40 450,70 500,70 550,20 590,20" 
+                          stroke="#3a6fd9" stroke-width="2" fill="none"/>
+            </svg>
+        </section>
+
+        <!-- Projekty DevOps -->
+        <section>
+            <h2>Projekty DevOps</h2>
+            <ul>
+                <li>Bash Automation Scripts ⚙️</li>
+                <li>Python CI/CD Pipeline ⚙️</li>
+                <li>Docker Container Deployment ⚙️</li>
+                <li>Monitoring i Logi ⚙️</li>
+            </ul>
+        </section>
+
+        <!-- Diagram procesu -->
+        <section>
+            <h2>Proces DevOps</h2>
+            <svg width="100%" height="80" viewBox="0 0 600 80">
+                <line x1="10" y1="40" x2="590" y2="40" stroke="#3a6fd9" stroke-width="2" stroke-dasharray="5,5"/>
+                <circle cx="10" cy="40" r="8" fill="#3a6fd9"/>
+                <circle cx="150" cy="40" r="8" fill="#3a6fd9"/>
+                <circle cx="300" cy="40" r="8" fill="#3a6fd9"/>
+                <circle cx="450" cy="40" r="8" fill="#3a6fd9"/>
+                <circle cx="590" cy="40" r="8" fill="#3a6fd9"/>
+                <text x="10" y="60" font-size="12" fill="#1a2a3a">Kod</text>
+                <text x="150" y="60" font-size="12" fill="#1a2a3a">Testy</text>
+                <text x="300" y="60" font-size="12" fill="#1a2a3a">Docker</text>
+                <text x="450" y="60" font-size="12" fill="#1a2a3a">Deploy</text>
+                <text x="590" y="60" font-size="12" fill="#1a2a3a">Monitor</text>
+            </svg>
+        </section>
+    </main>
+
+    <!-- Stopka -->
+    <footer>
+        <p> Projekty DevOps – 2025 | <a href="https://github.com/Explotion80" target="_blank">GitHub</a></p>
+    </footer>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(sec => observer.observe(sec));
+    </script>
+
+</body>
+</html>
