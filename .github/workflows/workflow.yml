@@ -21,7 +21,7 @@ jobs:
         with:
           registry: ghcr.io
           username: Explotion80
-          password: ${{ secrets.SIMPLE-WEBSITE }}
+          password: ${{ secrets.SIMPLE_WEBSITE }}
 
       - name: Build Docker image
         run: |
