@@ -12,8 +12,6 @@ Celem projektu jest nauka i praktyka **DevOps**:
 
 ---
 
----
-
 ## Kroki tworzenia projektu
 
 ### 1️⃣ Tworzenie strony
@@ -26,9 +24,11 @@ Celem projektu jest nauka i praktyka **DevOps**:
 
 ### 2️⃣ Docker – konteneryzacja
 - Utworzono `Dockerfile`:
+```
 FROM nginx:alpine
 COPY . /usr/share/nginx/html
 EXPOSE 80
+```
 
 
 GitHub Actions – CI/CD
@@ -49,11 +49,13 @@ Przykładowa konfiguracja loginu do GHCR:
 
 
 Publikacja obrazu:
+```
 ghcr.io/explotion80/simple-website/simple-website:latest
-
+```
 Uruchomienie kontenera z GHCR:
+```
 docker run -d -p 8080:80 ghcr.io/explotion80/simple-website/simple-website:latest
-
+```
 
 
 Dobre praktyki DevOps zastosowane w projekcie:
