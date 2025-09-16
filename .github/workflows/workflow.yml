@@ -20,13 +20,13 @@ jobs:
         uses: docker/login-action@v2
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: Explotion80
+          password: ${{ secrets.GHCR1_TOKEN }}
 
       - name: Build Docker image
         run: |
-          docker build -t ghcr.io/${{ github.explotion80 }}/simple-website:latest .
+          docker build -t ghcr.io/explotion80/simple-website/simple-website:latest .
 
       - name: Push Docker image
         run: |
-          docker push ghcr.io/${{ github.explotion80 }}/simple-website:latest
+          docker push ghcr.io/explotion80/simple-website/simple-website:latest
